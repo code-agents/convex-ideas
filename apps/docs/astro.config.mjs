@@ -6,25 +6,35 @@ import starlight from "@astrojs/starlight";
 export default defineConfig({
 	integrations: [
 		starlight({
-			title: "My Docs",
+			customCss: ['./src/styles/custom.css'],
+			title: "Convex Ideas",
+			description: "A collection of innovative ideas for Convex, focusing on coding agents and developer experience enhancements.",
 			social: [
 				{
 					icon: "github",
 					label: "GitHub",
-					href: "https://github.com/withastro/starlight",
+					href: "https://github.com/get-convex/convex",
 				},
 			],
 			sidebar: [
 				{
-					label: "Guides",
+					label: "🚀 Ideas",
 					items: [
-						// Each item here is one entry in the navigation menu.
-						{ label: "Example Guide", slug: "guides/example" },
+						{ label: "Browse All Ideas", slug: "ideas" },
+						{ label: "Submit an Idea", slug: "contribute" },
 					],
 				},
 				{
-					label: "Reference",
-					autogenerate: { directory: "reference" },
+					label: "🤖 Coding Agents",
+					autogenerate: { directory: "coding-agents" },
+				},
+				{
+					label: "💡 Developer Experience",
+					autogenerate: { directory: "developer-experience" },
+				},
+				{
+					label: "🔧 Platform Features",
+					autogenerate: { directory: "platform-features" },
 				},
 			],
 		}),

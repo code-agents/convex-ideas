@@ -1,0 +1,60 @@
+/* Import Inter font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* Override Starlight's default fonts with Inter */
+:root {
+	--sl-font: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+	--sl-font-mono: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace;
+}
+
+/* Apply Inter font styling */
+body {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+/* Enhance headings with Inter */
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-weight: 600;
+	font-style: normal;
+}
+
+/* Apply to navigation and UI elements */
+nav, .sidebar, .header, .footer {
+	font-family: "Inter", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+}
+
+/* Dark mode colors. */
+:root {
+	--sl-color-accent-low: #3b190e;
+	--sl-color-accent: #b63800;
+	--sl-color-accent-high: #ebbcae;
+	--sl-color-white: #ffffff;
+	--sl-color-gray-1: #f1ede7;
+	--sl-color-gray-2: #c5c2b9;
+	--sl-color-gray-3: #928b7b;
+	--sl-color-gray-4: #5e5749;
+	--sl-color-gray-5: #3e372a;
+	--sl-color-gray-6: #2c2619;
+	--sl-color-black: #1b1812;
+}
+/* Light mode colors. */
+:root[data-theme='light'] {
+	--sl-color-accent-low: #f1cec3;
+	--sl-color-accent: #b93a04;
+	--sl-color-accent-high: #551f0d;
+	--sl-color-white: #1b1812;
+	--sl-color-gray-1: #2c2619;
+	--sl-color-gray-2: #3e372a;
+	--sl-color-gray-3: #5e5749;
+	--sl-color-gray-4: #928b7b;
+	--sl-color-gray-5: #c5c2b9;
+	--sl-color-gray-6: #f1ede7;
+	--sl-color-gray-7: #f8f6f3;
+	--sl-color-black: #ffffff;
+}
