@@ -4,7 +4,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Convex Ideas** is a community-driven hub for innovative Convex feature concepts created by [code-agents.org](https://code-agents.org) and [@gunta](https://github.com/gunta). Built with Astro Starlight, it showcases ideas for coding agents, developer experience enhancements, and platform features. Each idea includes three components: Value Proposition (rich MDX landing page), PRD (Product Requirements Document), and Release Story (blog-style narrative).
+**Convex Ideas** is a community-driven hub for innovative Convex feature concepts created by [code-agents.com](https://code-agents.com) and [@gunta](https://github.com/gunta). Built with Astro Starlight, it showcases ideas for coding agents, developer experience enhancements, and platform features. Each idea includes three components: Value Proposition (rich MDX landing page), PRD (Product Requirements Document), and Release Story (blog-style narrative).
 
 **Deployment:** [code-agents.github.io/convex-ideas](https://code-agents.github.io/convex-ideas) via GitHub Pages
 Use always bun, never npm.
@@ -74,7 +74,7 @@ To add new database tables, update `packages/backend/convex/schema.ts` and creat
 ## Attribution & Deployment
 
 **Created by:** [@gunta](https://github.com/gunta) ([@gunta85](https://x.com/gunta85) on X/Twitter)  
-**Organization:** [code-agents.org](https://code-agents.org)  
+**Organization:** [code-agents.com](https://code-agents.com)  
 **Repository:** [code-agents/convex-ideas](https://github.com/code-agents/convex-ideas)  
 **Live Site:** [code-agents.github.io/convex-ideas](https://code-agents.github.io/convex-ideas)  
 **Deployment:** GitHub Actions + GitHub Pages (automatic on push to main)
@@ -86,4 +86,4 @@ Rich landing pages use custom Astro components:
 - `FeatureGrid` - Responsive layouts for showcasing features  
 - `FeatureCard` - Interactive cards with hover effects and icons
 - `ActionButton` - CTA buttons with multiple variants and animations
-- `CustomFooter` - Attribution footer with code-agents.org branding
+- `CustomFooter` - Attribution footer with code-agents.com branding

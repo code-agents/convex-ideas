@@ -23,7 +23,7 @@ export default defineConfig({
 				},
 			],
 			title: "Convex Ideas",
-			description: "A collection of innovative ideas for Convex, focusing on coding agents and developer experience enhancements. Created by code-agents.org.",
+			description: "A collection of innovative ideas for Convex, focusing on coding agents and developer experience enhancements. Created by code-agents.com.",
 			social: [
 				{
 					icon: "github",
@@ -31,9 +31,9 @@ export default defineConfig({
 					href: "https://github.com/code-agents/convex-ideas",
 				},
 				{
-					icon: "globe",
-					label: "code-agents.org",
-					href: "https://code-agents.org",
+					icon: "external",
+					label: "code-agents.com",
+					href: "https://code-agents.com",
 				},
 				{
 					icon: "x.com",
