@@ -1,14 +1,25 @@
 // @ts-check
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
+import tailwind from "@astrojs/tailwind";
+import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
 	site: 'https://code-agents.github.io',
 	base: '/convex-ideas',
 	integrations: [
+		react(),
+		tailwind({
+			applyBaseStyles: false,
+		}),
 		starlight({
 			customCss: ['./src/styles/custom.css'],
+			logo: {
+				src: './src/assets/lightbulb.svg',
+				replacesTitle: false,
+			},
+			favicon: '/favicon.svg',
 			components: {
 				Footer: './src/components/CustomFooter.astro',
 			},
