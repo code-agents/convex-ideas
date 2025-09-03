@@ -1,0 +1,166 @@
+---
+export interface Props {
+  title: string;
+  subtitle: string;
+  icon?: string;
+  status?: 'concept' | 'active' | 'development' | 'completed';
+  category?: string;
+}
+
+const { title, subtitle, icon = "lucide:lightbulb", status = "concept", category } = Astro.props;
+
+const statusConfig = {
+  concept: { color: '#f59e0b', text: 'Concept', icon: 'lucide:lightbulb' },
+  active: { color: '#10b981', text: 'Active', icon: 'lucide:refresh-cw' },
+  development: { color: '#3b82f6', text: 'In Development', icon: 'lucide:wrench' },
+  completed: { color: '#059669', text: 'Completed', icon: 'lucide:check-circle' }
+};
+---
+
+<div class="idea-hero">
+  <div class="hero-background"></div>
+  <div class="hero-content">
+    <div class="hero-header">
+      {category && (
+        <div class="category-badge">
+          <iconify-icon icon="lucide:tag" width="16" height="16"></iconify-icon>
+          {category}
+        </div>
+      )}
+      <div class="status-badge" style={`background-color: ${statusConfig[status].color}20; color: ${statusConfig[status].color};`}>
+        <iconify-icon icon={statusConfig[status].icon} width="16" height="16"></iconify-icon>
+        {statusConfig[status].text}
+      </div>
+    </div>
+    
+    <div class="hero-main">
+      <div class="hero-icon">
+        <iconify-icon icon={icon} width="64" height="64"></iconify-icon>
+      </div>
+      <h1 class="hero-title">{title}</h1>
+      <p class="hero-subtitle">{subtitle}</p>
+    </div>
+    
+    <div class="hero-actions">
+      <slot name="actions" />
+    </div>
+  </div>
+</div>
+
+<style>
+.idea-hero {
+  position: relative;
+  padding: 4rem 2rem 2rem;
+  margin: -2rem -2rem 3rem -2rem;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-background {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--sl-color-accent-low) 0%, transparent 50%);
+  opacity: 0.6;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-header {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+.category-badge, .status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  backdrop-filter: blur(8px);
+}
+
+.category-badge {
+  background-color: var(--sl-color-gray-5);
+  color: var(--sl-color-gray-1);
+}
+
+.hero-main {
+  margin-bottom: 2rem;
+}
+
+.hero-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  background: var(--sl-color-accent);
+  border-radius: 2rem;
+  margin: 0 auto 2rem;
+  color: white;
+  box-shadow: 0 20px 40px var(--sl-color-accent-low);
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1rem 0;
+  background: linear-gradient(135deg, var(--sl-color-accent), var(--sl-color-accent-high));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  color: var(--sl-color-gray-2);
+  line-height: 1.6;
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-actions {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+  .idea-hero {
+    padding: 3rem 1rem 2rem;
+    margin: -1rem -1rem 2rem -1rem;
+  }
+  
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
+  
+  .hero-icon {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .hero-icon iconify-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+</style>

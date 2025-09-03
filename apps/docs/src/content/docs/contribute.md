@@ -3,15 +3,15 @@ title: Contribute Your Ideas
 description: Learn how to submit and structure your Convex ideas for maximum impact.
 ---
 
-# 🚀 Contribute Your Ideas
+# <iconify-icon icon="lucide:rocket" width="28" height="28" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Contribute Your Ideas
 
 Have an innovative idea for Convex? We'd love to hear it! This guide will help you structure your contribution to maximize its impact and usefulness for the Convex development team.
 
-## 📋 Idea Structure
+## <iconify-icon icon="lucide:clipboard-list" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Idea Structure
 
 Every Convex idea should include **three essential components**:
 
-### 1. 🏠 **Value Proposition** (Landing Page)
+### 1. <iconify-icon icon="lucide:home" width="20" height="20" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>**Value Proposition** (Landing Page)
 **Purpose:** Clearly communicate the idea's value and inspire action  
 **Audience:** Product managers, stakeholders, and community members
 
@@ -22,7 +22,7 @@ Every Convex idea should include **three essential components**:
 - Visual mockups or diagrams (if applicable)
 - Competitive analysis or inspiration
 
-### 2. 📋 **Product Requirements Document (PRD)**
+### 2. <iconify-icon icon="lucide:clipboard-list" width="20" height="20" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>**Product Requirements Document (PRD)**
 **Purpose:** Provide detailed technical specifications for implementation  
 **Audience:** Engineering teams and technical stakeholders
 
@@ -34,7 +34,7 @@ Every Convex idea should include **three essential components**:
 - Testing strategy and acceptance criteria
 - Timeline estimates and milestones
 
-### 3. 📖 **Release Story** (Blog Entry)
+### 3. <iconify-icon icon="lucide:book-open" width="20" height="20" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>**Release Story** (Blog Entry)
 **Purpose:** Demonstrate go-to-market vision and user communication  
 **Audience:** Marketing, developer relations, and community
 
@@ -45,23 +45,23 @@ Every Convex idea should include **three essential components**:
 - Migration guide (if applicable)
 - Community impact and adoption strategy
 
-## 📂 File Organization
+## <iconify-icon icon="lucide:folder" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>File Organization
 
 Organize your idea using this structure:
 
 ```
-/[category]/[idea-name]/
-├── index.md          # Value Proposition (Landing Page)
+/ideas/[idea-name]/
+├── index.mdx         # Value Proposition (Rich Landing Page)
 ├── prd.md           # Product Requirements Document  
 └── blog.md          # Release Story
 ```
 
-**Categories:**
-- `coding-agents/` - AI-powered development tools
-- `developer-experience/` - Workflow and tooling improvements
-- `platform-features/` - Core platform enhancements
+**Structure Notes:**
+- All ideas are in `/ideas/` directory (no category folders)
+- Landing pages use `.mdx` for rich interactive components
+- Ideas can span multiple domains and categories
 
-## ✨ Contribution Process
+## <iconify-icon icon="lucide:git-branch" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Contribution Process
 
 1. **Fork the repository** and create a new branch
 2. **Create your idea directory** following the structure above
@@ -69,7 +69,7 @@ Organize your idea using this structure:
 4. **Submit a pull request** with a clear description
 5. **Engage with feedback** from the community and maintainers
 
-## 📝 Templates
+## <iconify-icon icon="lucide:file-text" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Templates
 
 ### Value Proposition Template
 ```markdown
@@ -155,7 +155,7 @@ Step-by-step guide for users.
 How this benefits the Convex ecosystem.
 ```
 
-## 🎯 Tips for Great Ideas
+## <iconify-icon icon="lucide:target" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Tips for Great Ideas
 
 - **Start with the problem**: Clearly articulate the pain point
 - **Be specific**: Provide concrete examples and use cases
@@ -163,7 +163,7 @@ How this benefits the Convex ecosystem.
 - **Reference existing patterns**: Build on familiar Convex concepts
 - **Consider the ecosystem**: How does this fit with existing features?
 
-## 🤝 Community Guidelines
+## <iconify-icon icon="lucide:users" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Community Guidelines
 
 - Be respectful and constructive in discussions
 - Focus on the technical merit of ideas

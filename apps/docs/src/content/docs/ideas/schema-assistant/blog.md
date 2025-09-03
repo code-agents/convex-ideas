@@ -9,7 +9,7 @@ description: Revolutionizing database schema development with intelligent, conve
 
 We're thrilled to announce the **AI-Powered Schema Assistant**, a groundbreaking feature that transforms how developers design, migrate, and optimize Convex database schemas. This intelligent coding agent brings the power of natural language processing directly into your development workflow, making complex database operations accessible to developers of all experience levels.
 
-## The Problem We're Solving
+## <iconify-icon icon=\"lucide:target\" width=\"24\" height=\"24\" style=\"color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;\"></iconify-icon>The Problem We're Solving
 
 Database schema development has always been one of the most challenging aspects of building applications. Developers spend countless hours wrestling with:
 
@@ -20,7 +20,7 @@ Database schema development has always been one of the most challenging aspects 
 
 Traditional tools force developers to context-switch between documentation, schema editors, and migration scripts. The result? Slower development cycles, more bugs, and a steeper learning curve for teams adopting Convex.
 
-## Meet Your New AI Assistant
+## <iconify-icon icon="lucide:bot" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Meet Your New AI Assistant
 
 The Schema Assistant changes everything. Instead of wrestling with complex documentation and migration tools, you simply **describe what you want in plain English**.
 
@@ -54,7 +54,7 @@ Would you like me to generate the schema code?"
 
 The assistant doesn't just generate code—it **explains its reasoning**, suggests best practices, and helps you understand the implications of each design decision.
 
-## Smart Migration Planning
+## <iconify-icon icon="lucide:route" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Smart Migration Planning
 
 Schema changes are no longer scary. The AI Assistant analyzes your existing schema and creates comprehensive migration plans:
 
@@ -93,7 +93,7 @@ AI Assistant: "I'll help you add avatars and ensure email uniqueness safely:
 Shall I generate the migration code?"
 ```
 
-## Interactive Schema Exploration
+## <iconify-icon icon="lucide:search" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Interactive Schema Exploration
 
 The assistant includes a visual schema explorer that makes understanding your database structure intuitive:
 
@@ -102,7 +102,7 @@ The assistant includes a visual schema explorer that makes understanding your da
 - **Performance hotspot identification** before they become problems
 - **Interactive exploration** of table relationships
 
-## Getting Started
+## <iconify-icon icon="lucide:play-circle" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Getting Started
 
 The Schema Assistant integrates seamlessly into your existing Convex workflow:
 
@@ -132,7 +132,7 @@ Access the assistant through the Convex dashboard:
 - Team collaboration features
 - Performance monitoring and insights
 
-## Real Developer Impact
+## <iconify-icon icon="lucide:trending-up" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Real Developer Impact
 
 Early beta users are already seeing transformative results:
 
@@ -221,7 +221,7 @@ Early access includes:
 
 ---
 
-## Community Spotlight
+## <iconify-icon icon="lucide:users" width="24" height="24" style="color: var(--sl-color-accent); vertical-align: middle; margin-right: 0.5rem;"></iconify-icon>Community Spotlight
 
 Share your Schema Assistant success stories with us:
 - **Twitter**: Tag [@convex_dev](https://twitter.com/convex_dev) with #SchemaAssistant

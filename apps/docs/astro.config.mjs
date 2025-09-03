@@ -4,37 +4,63 @@ import starlight from "@astrojs/starlight";
 
 // https://astro.build/config
 export default defineConfig({
+	site: 'https://code-agents.github.io',
+	base: '/convex-ideas',
 	integrations: [
 		starlight({
 			customCss: ['./src/styles/custom.css'],
+			components: {
+				Footer: './src/components/CustomFooter.astro',
+			},
+			head: [
+				// Add Iconify web components
+				{
+					tag: 'script',
+					attrs: {
+						type: 'module',
+						src: 'https://cdn.jsdelivr.net/npm/iconify-icon@2.1.0/dist/iconify-icon.min.js',
+					},
+				},
+			],
 			title: "Convex Ideas",
-			description: "A collection of innovative ideas for Convex, focusing on coding agents and developer experience enhancements.",
+			description: "A collection of innovative ideas for Convex, focusing on coding agents and developer experience enhancements. Created by code-agents.org.",
 			social: [
 				{
 					icon: "github",
-					label: "GitHub",
-					href: "https://github.com/get-convex/convex",
+					label: "Repository",
+					href: "https://github.com/code-agents/convex-ideas",
+				},
+				{
+					icon: "globe",
+					label: "code-agents.org",
+					href: "https://code-agents.org",
+				},
+				{
+					icon: "x.com",
+					label: "@gunta85",
+					href: "https://x.com/gunta85",
 				},
 			],
 			sidebar: [
 				{
-					label: "🚀 Ideas",
+					label: "Getting Started",
 					items: [
 						{ label: "Browse All Ideas", slug: "ideas" },
 						{ label: "Submit an Idea", slug: "contribute" },
 					],
 				},
 				{
-					label: "🤖 Coding Agents",
-					autogenerate: { directory: "coding-agents" },
+					label: "Featured Ideas",
+					items: [
+						{ 
+							label: "AI-Powered Schema Assistant", 
+							slug: "ideas/schema-assistant" 
+						},
+					],
 				},
 				{
-					label: "💡 Developer Experience",
-					autogenerate: { directory: "developer-experience" },
-				},
-				{
-					label: "🔧 Platform Features",
-					autogenerate: { directory: "platform-features" },
+					label: "All Ideas",
+					autogenerate: { directory: "ideas" },
 				},
 			],
 		}),

@@ -6,6 +6,7 @@
 		"packages/*"
 	],
 	"scripts": {
+		"dev:docs": "bun run --filter docs dev",
 		"dev": "bun run --filter '*' dev",
 		"build": "bun run --filter '*' build",
 		"check-types": "bun run --filter '*' check-types",

@@ -1,0 +1,200 @@
+---
+title: AI-Powered Schema Assistant
+description: Intelligent coding agent for designing, migrating, and optimizing Convex database schemas through natural language interactions.
+template: doc
+---
+
+import IdeaHero from '../../../../components/IdeaHero.astro';
+import FeatureGrid from '../../../../components/FeatureGrid.astro';
+import FeatureCard from '../../../../components/FeatureCard.astro';
+import ActionButton from '../../../../components/ActionButton.astro';
+
+<IdeaHero 
+  title="AI-Powered Schema Assistant" 
+  subtitle="Transform how developers work with Convex database schemas through intelligent, conversational AI assistance."
+  icon="lucide:brain"
+  status="active"
+  category="Coding Agents"
+>
+  <div slot="actions">
+    <ActionButton href="/ideas/schema-assistant/prd" icon="lucide:clipboard-list">
+      View PRD
+    </ActionButton>
+    <ActionButton href="/ideas/schema-assistant/blog" variant="outline" icon="lucide:book-open">
+      Release Story
+    </ActionButton>
+  </div>
+</IdeaHero>
+
+## The Challenge
+
+Database schema design and migration are among the most **error-prone** and **time-consuming** aspects of application development. Developers struggle with:
+
+<FeatureGrid>
+  <FeatureCard icon="lucide:alert-triangle" title="Schema Evolution Complexity">
+    Making breaking changes without data loss or downtime becomes a nightmare as applications scale.
+  </FeatureCard>
+  <FeatureCard icon="lucide:network" title="Relationship Modeling">
+    Designing optimal data relationships for performance and maintainability requires deep expertise.
+  </FeatureCard>
+  <FeatureCard icon="lucide:route" title="Migration Planning">
+    Understanding the impact of schema changes across the application often leads to unexpected issues.
+  </FeatureCard>
+  <FeatureCard icon="lucide:zap" title="Performance Optimization">
+    Knowing which indices and query patterns work best requires trial and error.
+  </FeatureCard>
+</FeatureGrid>
+
+## The Solution
+
+An **AI-powered Schema Assistant** that acts as an intelligent coding agent, providing:
+
+<FeatureGrid title="Core Capabilities">
+  <FeatureCard icon="lucide:message-circle" title="Natural Language Design" highlight>
+    **"Create a user profile system with social connections"**
+    
+    Transform plain English requirements into optimized Convex schemas with intelligent suggestions and best practices built-in.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:git-branch" title="Intelligent Migration Planning">
+    **Automated migration strategies with rollback plans**
+    
+    Analyze schema changes and generate safe, step-by-step migration paths with automatic conflict resolution.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:trending-up" title="Performance Analysis">
+    **Real-time optimization suggestions**
+    
+    Monitor query patterns and provide proactive recommendations for indices, query improvements, and data modeling.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:eye" title="Interactive Schema Explorer">
+    **Visual schema representation with AI insights**
+    
+    Navigate your data relationships with intelligent visualizations and contextual optimization advice.
+  </FeatureCard>
+</FeatureGrid>
+
+## Target Audience
+
+<FeatureGrid title="Who Benefits">
+  <FeatureCard icon="lucide:code" title="Frontend Developers" subtitle="Primary Users">
+    Transitioning to full-stack with Convex, need guidance on database design patterns and best practices.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:layers" title="Full-stack Developers" subtitle="Primary Users">
+    Working on complex data modeling, require intelligent assistance for schema evolution and optimization.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:users" title="Team Leads" subtitle="Primary Users">
+    Reviewing and optimizing existing schemas, ensuring consistency across team members and projects.
+  </FeatureCard>
+</FeatureGrid>
+
+## Key Benefits
+
+### For Individual Developers
+
+<FeatureGrid>
+  <FeatureCard icon="lucide:clock" title="Reduced Development Time">
+    Schema changes that took **hours** now take **minutes** with AI-powered automation and intelligent suggestions.
+  </FeatureCard>
+  <FeatureCard icon="lucide:shield" title="Fewer Production Issues">
+    AI-validated migrations prevent data loss and reduce schema-related bugs by **75%**.
+  </FeatureCard>
+  <FeatureCard icon="lucide:award" title="Improved Code Quality">
+    Optimized schemas following Convex best practices, automatically generated and reviewed.
+  </FeatureCard>
+</FeatureGrid>
+
+### For Teams & Organizations
+
+<FeatureGrid>
+  <FeatureCard icon="lucide:users-2" title="Standardized Patterns">
+    Consistent schema design across team members with AI-enforced best practices and conventions.
+  </FeatureCard>
+  <FeatureCard icon="lucide:share-2" title="Knowledge Sharing">
+    AI captures and propagates tribal knowledge, making expert patterns accessible to all developers.
+  </FeatureCard>
+  <FeatureCard icon="lucide:trending-down" title="Risk Mitigation">
+    Automated impact analysis prevents breaking changes and reduces deployment risks significantly.
+  </FeatureCard>
+</FeatureGrid>
+
+## Success Metrics
+
+<FeatureGrid title="Measurable Impact">
+  <FeatureCard icon="lucide:gauge" title="Developer Productivity" highlight>
+    - **50% reduction** in schema design time
+    - **75% fewer** schema-related bugs in production  
+    - **90% faster** onboarding for new Convex developers
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:code-2" title="Code Quality">
+    - **100% migration success rate** with rollback plans
+    - **40% improvement** in query performance scores
+    - **60% increase** in schema documentation coverage
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:heart" title="Adoption & Satisfaction">
+    - **80% of teams** using the assistant within 6 months
+    - **95% user satisfaction** rating in developer surveys  
+    - **10x increase** in community schema examples
+  </FeatureCard>
+</FeatureGrid>
+
+## Visual Concepts
+
+### Conversational Interface
+
+```typescript
+Developer: "I need to add comments to my blog posts"
+
+AI Assistant: "I'll help you add a comment system! Based on your existing blog schema, I recommend:
+
+1. Create a 'comments' table with:
+   - postId (reference to blog posts)
+   - authorId (user reference) 
+   - content (string)
+   - createdAt (timestamp)
+   - parentId (for nested comments)
+
+2. Add these relationships:
+   - posts.comments (one-to-many)
+   - users.comments (one-to-many)
+
+Would you like me to generate the schema code and migration plan?"
+```
+
+### Schema Visualization
+
+Interactive diagrams showing:
+- **Entity Relationships**: Visual connections between tables
+- **Query Paths**: Optimized access patterns with performance metrics
+- **Performance Hotspots**: Areas needing attention with specific recommendations
+- **Migration Impact**: Visual representation of what changes when you modify schemas
+
+---
+
+## Future Vision
+
+<FeatureCard icon="lucide:star" title="The Ultimate Development Experience" class="mt-8">
+Imagine a world where:
+
+- **Schema changes** are as easy as describing what you want in plain English
+- **Migrations** are automatically generated with confidence and comprehensive rollback plans  
+- **Performance optimization** happens proactively, not reactively
+- **New team members** become productive with Convex in hours, not weeks
+- **Complex data modeling** becomes accessible to developers of all experience levels
+
+The AI-Powered Schema Assistant transforms Convex from a powerful but complex tool into an **intuitive, intelligent development partner**.
+</FeatureCard>
+
+<div class="text-center mt-12">
+  <ActionButton href="/ideas/schema-assistant/prd" icon="lucide:clipboard-list" class="mr-4">
+    Explore the Complete PRD
+  </ActionButton>
+  <ActionButton href="/ideas/schema-assistant/blog" variant="outline" icon="lucide:book-open">
+    Read the Release Story
+  </ActionButton>
+</div>

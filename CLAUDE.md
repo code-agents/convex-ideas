@@ -4,7 +4,9 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Project Overview
 
-**Convex Ideas** is a community-driven hub for innovative Convex feature concepts. Built with Better-T-Stack (Astro Starlight + Convex backend), it showcases ideas for coding agents, developer experience enhancements, and platform features. Each idea includes three components: Value Proposition (landing page), PRD (Product Requirements Document), and Release Story (blog-style narrative).
+**Convex Ideas** is a community-driven hub for innovative Convex feature concepts created by [code-agents.org](https://code-agents.org) and [@gunta](https://github.com/gunta). Built with Astro Starlight, it showcases ideas for coding agents, developer experience enhancements, and platform features. Each idea includes three components: Value Proposition (rich MDX landing page), PRD (Product Requirements Document), and Release Story (blog-style narrative).
+
+**Deployment:** [code-agents.github.io/convex-ideas](https://code-agents.github.io/convex-ideas) via GitHub Pages
 Use always bun, never npm.
 
 ## Development Commands
@@ -37,10 +39,10 @@ cd apps/docs && bun build # Build documentation site only
 - `packages/backend/` - Convex backend with todo example functionality
 
 **Content Structure:**
-- `/coding-agents/` - AI-powered development tool ideas
-- `/developer-experience/` - Workflow and tooling improvement ideas  
-- `/platform-features/` - Core platform enhancement ideas
-- Each idea contains: `index.md` (value prop), `prd.md` (requirements), `blog.md` (release story)
+- `/ideas/` - All ideas in flattened structure (no categories)
+- Each idea contains: `index.mdx` (rich landing page), `prd.md` (requirements), `blog.md` (release story)
+- Landing pages use custom Astro components: IdeaHero, FeatureGrid, FeatureCard, ActionButton
+- Ideas can span multiple domains - no rigid categorization
 
 **Backend (Convex):**
 - Located in `packages/backend/convex/`
@@ -69,6 +71,19 @@ The backend uses Convex's reactive architecture:
 
 To add new database tables, update `packages/backend/convex/schema.ts` and create corresponding function files.
 
-## Documentation
+## Attribution & Deployment
 
-Documentation is built with Astro Starlight in `apps/docs/`. The site includes documentation about the project structure and setup.
+**Created by:** [@gunta](https://github.com/gunta) ([@gunta85](https://x.com/gunta85) on X/Twitter)  
+**Organization:** [code-agents.org](https://code-agents.org)  
+**Repository:** [code-agents/convex-ideas](https://github.com/code-agents/convex-ideas)  
+**Live Site:** [code-agents.github.io/convex-ideas](https://code-agents.github.io/convex-ideas)  
+**Deployment:** GitHub Actions + GitHub Pages (automatic on push to main)
+
+## Custom Components
+
+Rich landing pages use custom Astro components:
+- `IdeaHero` - Stunning hero sections with status badges and actions
+- `FeatureGrid` - Responsive layouts for showcasing features  
+- `FeatureCard` - Interactive cards with hover effects and icons
+- `ActionButton` - CTA buttons with multiple variants and animations
+- `CustomFooter` - Attribution footer with code-agents.org branding

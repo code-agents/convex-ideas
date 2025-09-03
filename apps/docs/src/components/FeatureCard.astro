@@ -1,0 +1,124 @@
+---
+export interface Props {
+  icon: string;
+  title: string;
+  subtitle?: string;
+  highlight?: boolean;
+  class?: string;
+}
+
+const { icon, title, subtitle, highlight = false, class: className } = Astro.props;
+---
+
+<div class={`feature-card ${highlight ? 'highlight' : ''} ${className || ''}`}>
+  <div class="card-icon">
+    <iconify-icon icon={icon} width="32" height="32"></iconify-icon>
+  </div>
+  <div class="card-content">
+    <h3 class="card-title">{title}</h3>
+    {subtitle && <p class="card-subtitle">{subtitle}</p>}
+    <div class="card-description">
+      <slot />
+    </div>
+  </div>
+</div>
+
+<style>
+.feature-card {
+  background: var(--sl-color-gray-6);
+  border: 2px solid var(--sl-color-gray-5);
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--sl-color-accent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.feature-card:hover {
+  border-color: var(--sl-color-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px var(--sl-color-accent-low);
+}
+
+.feature-card:hover::before {
+  opacity: 1;
+}
+
+.feature-card.highlight {
+  border-color: var(--sl-color-accent);
+  background: linear-gradient(135deg, var(--sl-color-accent-low), var(--sl-color-gray-6));
+}
+
+.feature-card.highlight::before {
+  opacity: 1;
+}
+
+.card-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
+  background: var(--sl-color-accent);
+  border-radius: 1rem;
+  color: white;
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0 0 0.5rem 0;
+  color: var(--sl-color-text);
+}
+
+.card-subtitle {
+  font-size: 0.875rem;
+  color: var(--sl-color-accent);
+  font-weight: 500;
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.card-description {
+  flex: 1;
+  color: var(--sl-color-gray-2);
+  line-height: 1.6;
+}
+
+.card-description :global(ul) {
+  margin: 0;
+  padding-left: 1.5rem;
+}
+
+.card-description :global(li) {
+  margin-bottom: 0.5rem;
+}
+
+.card-description :global(strong) {
+  color: var(--sl-color-text);
+}
+</style>
