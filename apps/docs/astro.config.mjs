@@ -20,6 +20,7 @@ export default defineConfig({
 				replacesTitle: false,
 			},
 			favicon: '/favicon.svg',
+			tableOfContents: false,
 			components: {
 				Footer: './src/components/CustomFooter.astro',
 			},
@@ -58,15 +59,6 @@ export default defineConfig({
 					items: [
 						{ label: "Browse All Ideas", slug: "ideas" },
 						{ label: "Submit an Idea", slug: "contribute" },
-					],
-				},
-				{
-					label: "Featured Ideas",
-					items: [
-						{ 
-							label: "AI-Powered Schema Assistant", 
-							slug: "ideas/schema-assistant" 
-						},
 					],
 				},
 				{

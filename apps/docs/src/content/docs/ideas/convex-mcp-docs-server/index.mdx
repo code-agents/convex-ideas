@@ -1,0 +1,263 @@
+---
+title: Convex MCP Docs Server
+description: Dynamic best practices for AI code generation that adapts to your project's unique requirements through the Model Context Protocol.
+template: doc
+---
+
+import IdeaHero from '../../../../components/IdeaHero.astro';
+import FeatureGrid from '../../../../components/FeatureGrid.astro';
+import FeatureCard from '../../../../components/FeatureCard.astro';
+import ActionButton from '../../../../components/ActionButton.astro';
+
+<IdeaHero 
+  title="Convex MCP Docs Server" 
+  subtitle="Dynamic best practices for AI code generation that adapts to your project's unique requirements, automatically."
+  icon="lucide:zap"
+  status="coming-soon"
+  category="AI Integration"
+>
+  <div slot="actions">
+    <ActionButton href="/convex-ideas/ideas/convex-mcp-docs-server/prd" icon="lucide:clipboard-list">
+      View PRD
+    </ActionButton>
+    <ActionButton href="/convex-ideas/ideas/convex-mcp-docs-server/blog" variant="outline" icon="lucide:book-open">
+      Release Story
+    </ActionButton>
+  </div>
+</IdeaHero>
+
+## The Problem
+
+While **convex-evals** has transformed AI code generation quality, developers still face significant friction:
+
+<FeatureGrid>
+  <FeatureCard icon="lucide:copy" title="Manual Maintenance Burden">
+    Copy-paste rules for every project update with no automatic synchronization of latest best practices.
+  </FeatureCard>
+  <FeatureCard icon="lucide:settings" title="Static Rules Don't Scale">
+    One-size-fits-all approach ignores project specifics like your validation library (Zod vs Valibot) or auth system.
+  </FeatureCard>
+  <FeatureCard icon="lucide:puzzle" title="Incomplete Coverage">
+    Missing component-specific patterns and integration guidelines for BetterAuth, Polar, and other tools.
+  </FeatureCard>
+  <FeatureCard icon="lucide:message-circle" title="Weak Enforcement">
+    Rules are suggestions, not constraints—AI agents often ignore or misinterpret static guidelines.
+  </FeatureCard>
+</FeatureGrid>
+
+## The Solution
+
+The **Convex MCP Docs Server** leverages the Model Context Protocol to deliver **project-aware, dynamic best practices** directly to AI coding agents:
+
+<FeatureGrid title="Key Innovation">
+  <FeatureCard icon="lucide:brain" title="Smart Configuration Detection" highlight>
+    **Automatically detects your stack:**
+    ```json
+    {
+      "validation": "zod",
+      "auth": "better-auth", 
+      "components": ["polar", "resend"]
+    }
+    ```
+    AI agents get rules tailored to YOUR project, not generic guidelines.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:refresh-cw" title="Auto-Updating Rules">
+    **Zero maintenance required**
+    
+    When Convex publishes new best practices, your AI automatically learns them. No more manual updates.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:shield-check" title="MCP Protocol Enforcement">
+    **Constraints, not suggestions**
+    
+    MCP tools are followed more strictly than static rules by AI agents like Cursor and Windsurf.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:layers" title="Component Intelligence">
+    **Deep integration knowledge**
+    
+    Using Polar? Get subscription lifecycle patterns. Using Resend? Get email best practices. Automatically.
+  </FeatureCard>
+</FeatureGrid>
+
+## How It Works
+
+<FeatureGrid title="Seamless Integration">
+  <FeatureCard icon="lucide:code" title="One-Line Configuration">
+    ```json
+    {
+      "mcpServers": {
+        "convex-docs": {
+          "command": "npx",
+          "args": ["@convex/mcp-docs-server"]
+        }
+      }
+    }
+    ```
+    That's it. Your AI now has dynamic, project-specific Convex knowledge.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:search" title="Smart Content Pipeline">
+    Continuously indexes:
+    - Official Convex documentation
+    - All component repositories  
+    - Stack articles (with author consent)
+    - Community patterns (vetted and tested)
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:gauge" title="Context-Aware Compilation">
+    Only loads relevant guidelines for your stack:
+    - Using Zod? Get Zod patterns
+    - Using BetterAuth? Get auth best practices
+    - Minimal context overhead, maximum relevance
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:monitor" title="Model-Specific Optimization">
+    Tailored for each AI model:
+    - **Claude**: XML-formatted with thinking tags
+    - **GPT-4**: JSON-structured guidelines  
+    - **Gemini**: Markdown with code-first examples
+  </FeatureCard>
+</FeatureGrid>
+
+## Before vs After
+
+### Before (Static Rules)
+```typescript
+// AI might generate (ignoring your Zod preference):
+export const createUser = mutation({
+  args: {
+    name: v.string(),
+    email: v.string(),
+  },
+  // Generic patterns, no project context
+});
+```
+
+### After (MCP Docs Server)
+```typescript
+// AI will generate (respecting your configuration):
+import { zMutation } from "@convex-dev/zod-utils";
+import { z } from "zod";
+
+export const createUser = zMutation({
+  args: z.object({
+    name: z.string().min(1),
+    email: z.string().email(),
+  }),
+  // Includes error handling, types, and patterns
+  // specific to YOUR chosen stack
+});
+```
+
+## Target Audience
+
+<FeatureGrid title="Who Benefits">
+  <FeatureCard icon="lucide:sparkles" title="AI-First Developers" subtitle="Primary Users">
+    Using Cursor, Windsurf, or other AI coding tools to build with Convex.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:users" title="Development Teams" subtitle="Primary Users">  
+    Want consistent patterns across all team members without manual coordination.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:building" title="Organizations" subtitle="Secondary Users">
+    Scaling Convex usage across multiple projects and requiring standardization.
+  </FeatureCard>
+</FeatureGrid>
+
+## Success Metrics
+
+<FeatureGrid title="Measurable Impact">
+  <FeatureCard icon="lucide:trending-up" title="Developer Productivity" highlight>
+    - **90% reduction** in validation-related bugs
+    - **5x faster** component integration  
+    - **Zero manual rule updates** required
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:target" title="Adoption & Quality">
+    - **50% of Cursor users** adopt within 3 months
+    - **2x faster** development velocity
+    - **95% satisfaction** rate from developers
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:zap" title="Performance">
+    - ** < 500ms** startup time
+    - ** < 100ms** rule compilation
+    - ** > 90%** cache hit rate
+  </FeatureCard>
+</FeatureGrid>
+
+## Integration Examples
+
+<FeatureGrid title="Works Everywhere">
+  <FeatureCard icon="lucide:mouse-pointer" title="Cursor Integration">
+    ```bash
+    npx @convex/mcp-docs-server install --editor=cursor
+    ```
+    One-click setup with deep Cursor integration.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:wind" title="Windsurf & VS Code">
+    Full MCP support with manual configuration options for any editor.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:package" title="Better T Stack">
+    **Included by default** in upcoming Better T Stack releases:
+    ```bash
+    npx create-t-stack@latest --convex --ai
+    ```
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:github" title="GitHub Copilot">
+    Coming Q4 2025 with Workspace integration support.
+  </FeatureCard>
+</FeatureGrid>
+
+## Why This Matters
+
+<FeatureGrid title="Strategic Impact">
+  <FeatureCard icon="lucide:rocket" title="Accelerate Adoption">
+    When AI consistently generates perfect Convex code, developers trust the platform more. Better generation = faster onboarding = more successful projects.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:graduation-cap" title="Education at Scale">
+    Every AI interaction becomes a teaching moment. Developers learn best practices naturally as they code, without reading documentation.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:trophy" title="Competitive Advantage">
+    Be the **first backend platform** with truly intelligent AI integration. While others provide static rules, Convex adapts dynamically.
+  </FeatureCard>
+  
+  <FeatureCard icon="lucide:star" title="Market Leadership">
+    Position Convex as the **AI-first backend platform** that understands and adapts to modern development workflows.
+  </FeatureCard>
+</FeatureGrid>
+
+---
+
+## Future Vision
+
+<FeatureCard icon="lucide:crystal-ball" title="The Ultimate AI Development Experience" class="mt-8">
+Imagine a development world where:
+
+- **AI agents** understand your project as deeply as you do
+- **Best practices** update themselves automatically across all your tools
+- **Every generated line** follows your team's exact patterns and conventions
+- **Component integration** happens flawlessly with zero configuration
+- **New team members** instantly benefit from accumulated knowledge
+
+The Convex MCP Docs Server isn't just an improvement—it's a **fundamental transformation** of how developers interact with backend platforms through AI assistance.
+
+**This is the future of AI-assisted Convex development. This is dynamic intelligence.**
+</FeatureCard>
+
+<div class="text-center mt-12">
+  <ActionButton href="/convex-ideas/ideas/convex-mcp-docs-server/prd" icon="lucide:clipboard-list" class="mr-4">
+    Explore the Technical PRD
+  </ActionButton>
+  <ActionButton href="/convex-ideas/ideas/convex-mcp-docs-server/blog" variant="outline" icon="lucide:book-open">
+    Read the Launch Story
+  </ActionButton>
+</div>

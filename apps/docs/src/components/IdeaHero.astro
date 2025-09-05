@@ -5,7 +5,7 @@ export interface Props {
   title: string;
   subtitle: string;
   icon?: string;
-  status?: 'concept' | 'active' | 'development' | 'completed';
+  status?: 'concept' | 'active' | 'development' | 'completed' | 'coming-soon';
   category?: string;
   class?: string;
 }
@@ -16,7 +16,8 @@ const statusConfig = {
   concept: { variant: 'secondary', text: 'Concept', icon: 'lucide:lightbulb' },
   active: { variant: 'default', text: 'Active', icon: 'lucide:refresh-cw' },
   development: { variant: 'outline', text: 'In Development', icon: 'lucide:wrench' },
-  completed: { variant: 'secondary', text: 'Completed', icon: 'lucide:check-circle' }
+  completed: { variant: 'secondary', text: 'Completed', icon: 'lucide:check-circle' },
+  'coming-soon': { variant: 'default', text: 'Coming Soon', icon: 'lucide:rocket' }
 };
 ---
 
